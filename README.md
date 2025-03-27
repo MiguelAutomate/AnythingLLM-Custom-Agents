@@ -27,6 +27,7 @@ Handler JS Reference: https://docs.anythingllm.com/agent/custom/handler-js
 ## 5. Deploy and test in your AnythingLLM instance
 
 ### Folder Structure
+
 anythingllm-custom-agents/
 │── agent-1/
 │   ├── plugin.json
