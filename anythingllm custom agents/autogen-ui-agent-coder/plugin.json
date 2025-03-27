@@ -1,0 +1,59 @@
+{
+  "active": true,
+  "hubId": "autogen-ui-agent-coder",
+  "name": "AutoGen UI Agent Coder",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Generates JSON configurations for AutoGen Studio 0.4 UI, including teams, agents, models, tools, and terminations.",
+  "author": "@yourusername",
+  "author_url": "https://github.com/yourusername",
+  "license": "MIT",
+  "setup_args": {
+    "AUTOGEN_API_URL": {
+      "type": "string",
+      "required": false,
+      "input": {
+        "type": "text",
+        "default": "http://localhost:8000/api",
+        "placeholder": "Enter the AutoGen API URL",
+        "hint": "The base URL for the AutoGen API (optional)"
+      }
+    }
+  },
+  "examples": [
+    {
+      "prompt": "Create a team with an assistant agent and a user agent.",
+      "call": "{\"team_name\": \"human_in_loop_team\", \"assistant_agent_name\": \"assistant_agent\", \"user_agent_name\": \"user_agent\"}"
+    },
+    {
+      "prompt": "Create a team with a calculator tool.",
+      "call": "{\"team_name\": \"calculator_team\", \"assistant_agent_name\": \"assistant_agent\", \"tool_name\": \"calculator\"}"
+    },
+    {
+      "prompt": "Create a team with a website fetcher tool.",
+      "call": "{\"team_name\": \"website_fetcher_team\", \"assistant_agent_name\": \"assistant_agent\", \"tool_name\": \"fetch_website\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "team_name": {
+        "description": "The name of the team.",
+        "type": "string"
+      },
+      "assistant_agent_name": {
+        "description": "The name of the assistant agent.",
+        "type": "string"
+      },
+      "user_agent_name": {
+        "description": "The name of the user agent (optional).",
+        "type": "string"
+      },
+      "tool_name": {
+        "description": "The name of the tool to include (optional).",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

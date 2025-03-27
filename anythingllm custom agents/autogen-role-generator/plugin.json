@@ -1,0 +1,51 @@
+{
+  "active": true,
+  "hubId": "autogen-role-generator",
+  "name": "Autogen Agent Role Generator",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Generates Python code for custom AutoGen agents based on user-defined roles (e.g., 'data analyst', 'API integrator').",
+  "author": "@someflavor",
+  "author_url": "https://github.com/someflavor",
+  "license": "MIT",
+  "setup_args": {
+    "AUTOGEN_API_URL": {
+      "type": "string",
+      "required": false,
+      "input": {
+        "type": "text",
+        "default": "http://localhost:8000/api",
+        "placeholder": "Enter the AutoGen API URL",
+        "hint": "The base URL for the AutoGen API (optional)"
+      }
+    }
+  },
+  "examples": [
+    {
+      "prompt": "Create an agent that fetches weather data.",
+      "call": "{\"role\": \"weather fetcher\", \"description\": \"Fetches weather data from an API.\"}"
+    },
+    {
+      "prompt": "Create an agent that processes CSV files.",
+      "call": "{\"role\": \"data processor\", \"description\": \"Processes CSV files and performs data analysis.\"}"
+    },
+    {
+      "prompt": "Create an agent that integrates with a REST API.",
+      "call": "{\"role\": \"API integrator\", \"description\": \"Integrates with a REST API to fetch and process data.\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "role": {
+        "description": "The role of the agent (e.g., 'data analyst', 'API integrator').",
+        "type": "string"
+      },
+      "description": {
+        "description": "A brief description of the agent's role and functionality.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

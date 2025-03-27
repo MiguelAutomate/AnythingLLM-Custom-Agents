@@ -1,0 +1,47 @@
+{
+  "active": true,
+  "hubId": "python-ai-expert",
+  "name": "python ai coder",
+  "schema": "skill-1.0.0",
+  "version": "1.1.0",
+  "description": "Provides expertise on Python AI libraries and tools, including Microsoft's Magentic-One AutoGen MAS Framework.",
+  "author": "@someflavor",
+  "author_url": "https://github.com/someflavor",
+  "license": "MIT",
+  "setup_args": {
+    "MAGENTIC_ONE_API_URL": {
+      "type": "string",
+      "required": true,
+      "input": {
+        "type": "text",
+        "default": "http://localhost:8000/api",
+        "placeholder": "Enter the Magentic-One API URL",
+        "hint": "The base URL for the Magentic-One API"
+      }
+    }
+  },
+  "examples": [
+    {
+      "prompt": "What is TensorFlow?",
+      "call": "{}"
+    },
+    {
+      "prompt": "How do I install PyTorch?",
+      "call": "{}"
+    },
+    {
+      "prompt": "Tell me about Microsoft's Magentic-One.",
+      "call": "{}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "query": {
+        "description": "The user's query about Python AI libraries or tools.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

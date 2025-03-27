@@ -1,0 +1,47 @@
+{
+    "active": true,
+    "hubId": "python-learning-assistant",
+    "name": "Python Learning Assistant",
+    "schema": "skill-1.0.0",
+    "version": "1.0.0",
+    "description": "Provides expertise on Python programming and AutoGen concepts, including explanations, tutorials, and real-time coding assistance.",
+    "author": "@someflavor",
+    "author_url": "https://github.com/someflavor",
+    "license": "MIT",
+    "setup_args": {
+      "AUTOGEN_API_URL": {
+        "type": "string",
+        "required": false,
+        "input": {
+          "type": "text",
+          "default": "http://localhost:8000/api",
+          "placeholder": "Enter the AutoGen API URL",
+          "hint": "The base URL for the AutoGen API (optional)"
+        }
+      }
+    },
+    "examples": [
+      {
+        "prompt": "What is a Python decorator?",
+        "call": "{}"
+      },
+      {
+        "prompt": "How do I create a custom AutoGen agent?",
+        "call": "{}"
+      },
+      {
+        "prompt": "Explain how to use AutoGen Magnetic.",
+        "call": "{}"
+      }
+    ],
+    "entrypoint": {
+      "file": "handler.js",
+      "params": {
+        "query": {
+          "description": "The user's query about Python or AutoGen.",
+          "type": "string"
+        }
+      }
+    },
+    "imported": true
+  }
