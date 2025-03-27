@@ -28,7 +28,7 @@ Handler JS Reference: https://docs.anythingllm.com/agent/custom/handler-js
 
 ### Folder Structure
 
-anythingllm-custom-agents/
+```anythingllm-custom-agents/
 │── agent-1/
 │   ├── plugin.json
 │   ├── handler.js
@@ -36,5 +36,6 @@ anythingllm-custom-agents/
 │   ├── plugin.json
 │   ├── handler.js
 │── README.md
+```
 
 Feel free to fork and contribute by adding more agents or improving existing implementations.
