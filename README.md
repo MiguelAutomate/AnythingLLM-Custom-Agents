@@ -18,8 +18,11 @@ This repository contains custom agent skills for **AnythingLLM**, designed to en
 2. Follow the AnythingLLM Agent Developer Guide:
 
 Introduction: https://docs.anythingllm.com/agent/custom/introduction
+
 Developer Guide: https://docs.anythingllm.com/agent/custom/developer-guide
+
 Plugin JSON Reference: https://docs.anythingllm.com/agent/custom/plugin-json
+
 Handler JS Reference: https://docs.anythingllm.com/agent/custom/handler-js
 
 ## 3. Modify or add your own agent configurations in plugin.json
