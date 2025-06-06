@@ -52,7 +52,7 @@ Getting these custom agents up and running with your AnythingLLM instance is str
 ## 📂 Project Structure
 
 This repository is organized to make navigating and understanding each custom agent intuitive:
-
+```
 anythingllm-custom-agents/
 │
 ├── agent-1/                # Example Agent 1: Contains a complete custom agent
@@ -64,3 +64,4 @@ anythingllm-custom-agents/
 │   └── handler.js          #   - JavaScript logic
 │
 └── README.md               # You're reading this!
+```
